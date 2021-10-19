@@ -2,11 +2,13 @@ import React from 'react';
 
 import { Container, Time } from './style'
 
-const Clock: React.FC = () => {
+const Clock: React.FC = (props) => {
+    var date = new Date()
+    var hour = date.toLocaleTimeString()
     return (
         <Container>
             <Time>
-                {18+3} : 00
+                {hour}
             </Time>
         </Container>
     )
